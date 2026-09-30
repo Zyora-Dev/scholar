@@ -11,7 +11,7 @@ Last updated: 2026-09-30
 ## Publication Checkpoint
 
 - Destination repository queried successfully and has no existing refs. Reviewed pending changes; dependency lockfiles remain unchanged and generated outputs are ignored.
-- Deployment guide now points to the approved destination. Commit and push outcome pending at this pre-publication checkpoint; prior build and browser verification remains applicable.
+- Deployment guide points to the approved destination. Commit `e9e6485` (Prepare standalone Scholar app for Render deployment) was successfully pushed to `origin/main` at Zyora-Dev/scholar. Local `main` tracks `origin/main`; the original source remote is retained as `upstream`. Prior build and browser verification remains applicable; hosted CI and Render deployment are not verified.
 
 ## Completed
 
