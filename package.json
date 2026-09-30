@@ -1,0 +1,10 @@
+﻿{
+  "name": "tribal-saksham-ai",
+  "version": "1.0.0",
+  "description": "TRIBAL SAKSHAM AI - From Scholarship Discovery to Successful Disbursement (SIH26239)",
+  "private": true,
+  "scripts": {
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev"
+  }
+}

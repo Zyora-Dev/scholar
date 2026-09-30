@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-scale: 1;
+}
+
+body {
+  font-size: calc(1rem * var(--font-scale));
+}
+
+/* Accessibility: High Contrast Mode */
+body.high-contrast {
+  filter: contrast(125%);
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+body.high-contrast .bg-surface,
+body.high-contrast .bg-pageBg,
+body.high-contrast .bg-white {
+  background-color: #121212 !important;
+  color: #fff !important;
+  border-color: #444 !important;
+}
+
+/* Low-Bandwidth Mode */
+body.low-bandwidth * {
+  animation: none !important;
+  transition: none !important;
+}
+
+body.low-bandwidth img:not(.essential-img) {
+  display: none !important;
+}
