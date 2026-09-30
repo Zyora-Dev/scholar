@@ -2,3 +2,8 @@ tribal-saksham-ai.zip
 client/node_modules/
 server/node_modules/
 .env
+client/dist/
+server/dist/
+server/uploads/
+.env.*
+!.env.example

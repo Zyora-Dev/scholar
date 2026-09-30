@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { User, UserRole } from "../types";
+import { api } from "../services/api";
 
 interface AuthContextType {
   user: User | null;
@@ -49,12 +50,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const login = async (email: string, role?: UserRole) => {
     try {
-      const res = await fetch("/api/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, role })
-      });
-      const data = await res.json();
+      const data = await api.login(email, role);
       if (data.success) {
         setUser(data.user);
         setToken(data.token);
@@ -69,12 +65,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const demoSwitch = async (role: UserRole) => {
     try {
-      const res = await fetch("/api/auth/demo-switch", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ role })
-      });
-      const data = await res.json();
+      const data = await api.demoSwitch(role);
       if (data.success) {
         setUser(data.user);
         setToken(data.token);

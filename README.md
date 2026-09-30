@@ -136,6 +136,12 @@ tribal-saksham-ai/
 
 ## 🏃 Running the Application Locally
 
+### Render Deployment
+
+See [DEPLOY_RENDER.md](DEPLOY_RENDER.md) for the separate Render API and static-site setup, configuration, verification and limitations. The root [render.yaml](render.yaml) defines both services. GitHub Actions checks builds; it no longer deploys GitHub Pages.
+
+**Demo-only warning:** the current backend uses mock authentication and in-memory records. Passwords are not verified and demo role switching is public; the role descriptions above are not a production RBAC guarantee. Do not use real student data or documents.
+
 ### Prerequisites
 - Node.js LTS (v18+)
 

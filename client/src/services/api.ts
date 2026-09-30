@@ -1,4 +1,4 @@
-const API_BASE = "/api";
+const API_BASE = `${(import.meta.env.VITE_API_URL || "").trim().replace(/\/+$/, "")}/api`;
 
 function getHeaders() {
   const token = localStorage.getItem("saksham_token");
